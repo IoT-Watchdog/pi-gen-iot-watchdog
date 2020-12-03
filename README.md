@@ -1,12 +1,13 @@
 # IoT-Watchdog Image generator - via pi-gen 
 
 before first build:
-
- ./prepare.sh
-
+```
+./prepare.sh
+```
 regular build:
- ./build.sh
-
+```
+./build.sh
+```
 ## How does it work?
 
 IoT-Watchdog uses [ntopng](https://github.com/ntop/ntopng/blob/dev/doc/README.geolocation.md) (community edition) to log network traffic.
