@@ -1,0 +1,12 @@
+# Working Directories, etc ...
+deploy/
+work/
+config
+
+# Archives
+*.zip
+*.deb
+*.tar.gz
+
+# files with no licence do redistribute
+stage3/01-tweaks/rootfs/var/lib/GeoIP/

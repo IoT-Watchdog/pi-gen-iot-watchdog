@@ -1,0 +1,13 @@
+[Unit]
+Description=resets ntopng mysql db before start
+After=mariadb.service
+Requires=mariadb.service
+Before=ntopng.service
+Wants=ntopng.service
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/reset_ntopng.sh
+
+[Install]
+WantedBy=multi-user.target

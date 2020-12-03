@@ -1,0 +1,22 @@
+#!/bin/sh
+echo
+# systemctl list-units --state=failed --all | head -n -6
+starting=$(systemctl list-units --state=activating --all)
+if echo "$starting" | grep -q "0 loaded units listed"; then
+  echo "Startup complete"
+else
+  services=$(echo "$starting" | grep "^\w*.service" -o)
+  for service in $services; do
+    echo "starting: $service, $(systemctl show $service -p NRestarts)"
+  done
+fi
+echo
+
+failed=$(systemctl list-units --state=failed --all)
+if echo "$failed" | grep -q "0 loaded units listed"; then
+  echo "No failed services."
+else
+  echo "$failed"
+fi
+echo
+uptime

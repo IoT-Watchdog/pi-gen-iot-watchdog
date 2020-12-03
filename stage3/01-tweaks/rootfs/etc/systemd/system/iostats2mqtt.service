@@ -1,0 +1,16 @@
+[Unit]
+Description=MQTT service that collects system temperature data and sends it to broker
+After=mosquitto.service
+Requires=mosquitto.service
+
+[Service]
+User=root
+Restart=always
+WatchdogSec=30
+# Note: setting PYTHONUNBUFFERED is necessary to see the output of this service in the journal
+# See https://docs.python.org/2/using/cmdline.html#envvar-PYTHONUNBUFFERED
+Environment=PYTHONUNBUFFERED=true
+ExecStart=/usr/local/bin/iostats2mqtt.py
+
+[Install]
+WantedBy=multi-user.target

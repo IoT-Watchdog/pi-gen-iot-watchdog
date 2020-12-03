@@ -1,0 +1,15 @@
+[Match]
+Name=pan0
+
+[Network]
+Address=192.168.47.1/24
+DHCPServer=yes
+
+#[Route]
+#Gateway=192.168.47.1
+#Destination=192.168.47.0/24
+#Metric=1
+
+[DHCPServer]
+EmitDNS=false
+EmitRouter=false

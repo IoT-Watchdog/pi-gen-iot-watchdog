@@ -1,0 +1,12 @@
+# should run as early as possible to speed up boot time
+# https://www.raspberrypi.org/forums/viewtopic.php?t=148414
+[Unit]
+Description=Set CPU scaling governor to performance 
+DefaultDependencies=no
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/set-cpu-gov-perf.sh
+
+[Install]
+WantedBy=sysinit.target

@@ -1,0 +1,6 @@
+[submodule "externals/pi-gen"]
+	path = externals/pi-gen
+	url = https://github.com/RPi-Distro/pi-gen.git
+[submodule "externals/ctraspion"]
+	path = externals/ctraspion
+	url = https://github.com/ct-Open-Source/ctraspion.git

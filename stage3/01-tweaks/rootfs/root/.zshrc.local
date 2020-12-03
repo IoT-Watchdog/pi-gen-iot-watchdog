@@ -1,0 +1,30 @@
+
+alias ll='ls -lha'
+alias l='ls -lh'
+
+# ad DOS
+alias cd..='cd ..'
+alias cls='clear'
+
+alias agd='apt-get update'
+alias agg='apt-get upgrade'
+alias agi='aptitude install'
+alias agr='aptitude remove'
+alias agp='aptitude purge'
+alias ach='apt-cache search'
+alias acp='apt-cache policy'
+alias acs='apt-cache show'
+alias dbi='dpkg -l | grep "^ii" | grep'
+
+alias gp='git push'
+alias gl='git -c user.name="$LC_GITUSER" -c user.email="$LC_GITEMAIL" pull'
+alias gma='git -c user.name="$LC_GITUSER" -c user.email="$LC_GITEMAIL" commit --amend'
+alias gm='git -c user.name="$LC_GITUSER" -c user.email="$LC_GITEMAIL" commit -m'
+alias gco='git checkout'
+alias gs='git status'
+alias ga='git add'
+alias gd='git diff'
+
+export SAVEHIST=10000
+export HISTSIZE=10000
+

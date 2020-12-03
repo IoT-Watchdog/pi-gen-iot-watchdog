@@ -1,0 +1,14 @@
+[Unit]
+Description=MQTT service that collects gpu data (temperatures etc) and sends it to broker
+After=mosquitto.service
+Requires=mosquitto.service
+
+[Service]
+User=root
+Restart=always
+WatchdogSec=30
+Environment=PYTHONUNBUFFERED=true
+ExecStart=/usr/local/bin/vcgencmd-stats.py
+
+[Install]
+WantedBy=multi-user.target

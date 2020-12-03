@@ -1,0 +1,10 @@
+[Unit]
+Description=Bluetooth NAP service
+After=bluetooth.service
+Requires=bluetooth.service
+
+[Service]
+ExecStart=/usr/share/doc/bluez-test-scripts/examples/test-nap pan0
+
+[Install]
+WantedBy=multi-user.target

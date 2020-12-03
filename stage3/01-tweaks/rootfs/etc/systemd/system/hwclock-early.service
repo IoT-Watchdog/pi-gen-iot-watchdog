@@ -1,0 +1,12 @@
+# should run as early as possible to have correct timestamps for measurement data
+# https://www.raspberrypi.org/forums/viewtopic.php?t=148414
+[Unit]
+Description=Set hwclock time to sys as early as possible
+DefaultDependencies=no
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/hwclock-early.sh
+
+[Install]
+WantedBy=sysinit.target

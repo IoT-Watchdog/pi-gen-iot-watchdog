@@ -1,0 +1,20 @@
+set shiftwidth=2
+set expandtab
+set tabstop=2
+syntax on
+au BufNewFile,BufRead config.txt set filetype=zsh
+
+set foldmethod=syntax
+set foldlevelstart=1
+
+if has("gui_running")
+    "echo "yes, we have a GUI"
+    set mouse=a
+else
+    "echo "Boring old console"
+    set mouse=
+endif
+
+set list
+set listchars=tab:>-
+let javaScript_fold=1         " JavaScript
